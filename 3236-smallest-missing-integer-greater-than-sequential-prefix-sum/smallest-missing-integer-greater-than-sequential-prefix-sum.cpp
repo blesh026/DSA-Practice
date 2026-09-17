@@ -13,21 +13,11 @@ public:
             else break;
         }
 
-        while(true){
-            bool found=false;
-
-            for(int j=0;j<n;j++){
-                if(nums[j]==sum){
-                    found=true;
-                    break;
-                }
-            }
-
-            if(found==false){
-                return sum;
-            }
-
+         while(find(nums.begin(), nums.end(), sum) != nums.end()){
             sum++;
         }
+
+        return sum;
     }
+    
 };
